@@ -22,7 +22,7 @@ const MusicRoutes       = require('./routes');
 
 module.exports = {
   MusicActions:         MusicActions.default,
-  VideoThumb:           VideoThumb.default,
+  VideoThumb:           VideoThumb,
   GetVideoThumb:        GetVideoThumb.default,
   MusicCollection:      MusicCollection.default,
   ArtistsCollection:    ArtistsCollection.default,
