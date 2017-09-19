@@ -1,0 +1,21 @@
+// A list of all actions in the system.
+import { createTypes } from 'reduxsauce'
+
+export default createTypes(`
+
+  GET_ARTISTS_REQUEST
+  GET_ARTISTS_SUCCESS
+  GET_ARTISTS_FAILURE
+
+  GET_MUSIC_REQUEST
+  GET_MUSIC_SUCCESS
+  GET_MUSIC_FAILURE
+
+  GET_ITUNES_REQUEST
+  GET_ITUNES_SUCCESS
+  GET_ITUNES_FAILURE
+
+  GET_YOUTUBE_REQUEST
+  GET_YOUTUBE_SUCCESS
+  GET_YOUTUBE_FAILURE
+`)

@@ -1,0 +1,6 @@
+{
+  "name": "VideoThumb",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./VideoThumb.js"
+}
