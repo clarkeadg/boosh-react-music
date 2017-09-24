@@ -40,7 +40,7 @@ class GetVideoThumb extends React.Component {
     return (
       <Link className="videothumb" to={'/video/'+item.title+'/all'}>
         <div className="videothumb-cont">
-          <img src={'http://img.youtube.com/vi/'+item.ytid+'/mqdefault.jpg'}/>
+          <img src={'//img.youtube.com/vi/'+item.ytid+'/mqdefault.jpg'}/>
           <h6>{item.title}</h6>
         </div>
       </Link>
