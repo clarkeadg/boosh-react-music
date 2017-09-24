@@ -98,6 +98,11 @@ export default (api) => {
     }*/
   }
 
+  function * watchGetMusicPreloaderAttempt () {
+    const { meta } = yield take(Types.GET_MUSIC_REQUEST)
+    yield call(attemptGetMusic, meta)
+  }
+
   function * watchGetArtistsAttempt () {
     //yield takeEvery(Types.GET_ARTISTS_REQUEST, attemptGetArtists)
     // daemonize
@@ -109,11 +114,18 @@ export default (api) => {
     }
   }
 
+  function * watchGetArtistsPreloaderAttempt () {
+    const { meta } = yield take(Types.GET_ARTISTS_REQUEST)
+     yield call(attemptGetArtists, meta) 
+  }
+
   return {
     attemptGetMusic, 
     watchGetMusicAttempt,
+    watchGetMusicPreloaderAttempt,
 
     attemptArtists, 
-    watchGetArtistsAttempt 
+    watchGetArtistsAttempt,
+    watchGetArtistsPreloaderAttempt
   }
 }
