@@ -10,7 +10,7 @@ import Actions from '../Actions/Creators'
 import { getArtistsCollection } from '../Selectors/ArtistsSelector'
 
 /* Components */
-import { Row, Column, Button, MediaObject, MediaObjectSection, Thumbnail } from 'react-foundation';
+import { Row, Column } from 'react-foundation';
 import { Pagination, Portlet, Loading } from 'boosh-react-components'
 //import VideoThumb from '../Components/VideoThumb/VideoThumb'
 import { Link } from 'react-router'
@@ -27,22 +27,19 @@ class ArtistsCollection extends React.Component {
     }
 
     let size = this.props.size || 4;
+    let photo = '';
 
     return (
       <Row upOnSmall={2} upOnMedium={4} upOnLarge={size}>
         {artists.map((item, id) => {
+          photo = item.photo.replace('http://','//');
           return (
             <Column key={id}>
-              <Link to={'/artist/'+item.title}>
-                <MediaObject>
-                  <MediaObjectSection>
-                    <Thumbnail src={item.photo}/>
-                  </MediaObjectSection>
-                  <MediaObjectSection isMain>
-                    <h6>{item.title}</h6>
-                    <p></p>
-                  </MediaObjectSection>
-                </MediaObject>
+              <Link className="videothumb" to={'/artist/'+item.title}>
+                <div className="videothumb-cont">
+                  <img src={photo}/>
+                  <h6>{item.title}</h6>
+                </div>
               </Link>
             </Column>
           )

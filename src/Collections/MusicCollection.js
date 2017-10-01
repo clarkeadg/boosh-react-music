@@ -10,7 +10,7 @@ import Actions from '../Actions/Creators'
 import { getMusicCollection } from '../Selectors/MusicSelector'
 
 /* Components */
-import { Row, Column, Button, MediaObject, MediaObjectSection, Thumbnail } from 'react-foundation';
+import { Row, Column } from 'react-foundation';
 import { Pagination, Portlet, Loading } from 'boosh-react-components'
 //import VideoThumb from '../Components/VideoThumb/VideoThumb'
 import { Link } from 'react-router'
