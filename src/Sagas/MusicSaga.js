@@ -51,7 +51,7 @@ export default (api) => {
     }
   }
 
-  function * attemptArtists (meta) {
+  function * attemptGetArtists (meta) {
 
     // for new pagination
     let query = meta.query ? meta.query : meta;
@@ -124,7 +124,7 @@ export default (api) => {
     watchGetMusicAttempt,
     watchGetMusicPreloaderAttempt,
 
-    attemptArtists, 
+    attemptGetArtists, 
     watchGetArtistsAttempt,
     watchGetArtistsPreloaderAttempt
   }
